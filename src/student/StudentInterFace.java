@@ -14,7 +14,7 @@ public class StudentInterFace {
 
         while (true) {
             //Input first Studnet's data
-            System.out.print("Enter name for first student (min 1 letter); ");
+            System.out.print("Enter name for first student (min 1 letter) ");
             name = scan.nextLine();
             stu1.setName(name);
             for (int i = 1; i <= 3; i++) {
@@ -36,7 +36,7 @@ public class StudentInterFace {
             //input the second student's data
             //Input the first student's data
             {
-                System.out.println("Enter name for secondd students: ");
+                System.out.println("Enter name for second student: ");
             }
             name = scan.nextLine();
             stu2.setName(name);
