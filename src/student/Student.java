@@ -63,6 +63,7 @@ public class Student {
     public int getHighScore() {
         int high = Math.max(test1, test3);
         high = Math.max(high, test3);
+        
         return high;
     }
 

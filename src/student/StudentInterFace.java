@@ -59,7 +59,16 @@ public class StudentInterFace {
         System.out.println(stu1);
         System.out.println(stu2);
         System.out.println("\n-----------------------\n");
-        stu1.getHighScore();
-        System.out.println("Highest Score: " high );
+        if(stu1.getHighScore()>stu2.getHighScore()){
+            System.out.println(stu1.getName() + " had the higest mark.");
+        }
+        else
+            System.out.println(stu2.getName() + " had the highest mark");
+        if(stu1.getAverage()>stu2.getAverage()){
+            System.out.println(stu1.getName() + " had the better average.");
+        }
+        else
+            System.out.println(stu2.getName() + " had the better average");
+        System.out.println("\n-----------------------\n");
     }
 }
