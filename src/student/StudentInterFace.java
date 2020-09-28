@@ -32,7 +32,8 @@ public class StudentInterFace {
         }
         scan.nextLine(); //clear scanner buffer
         System.out.println("\n-----------------------\n");
-        while (true) { //input the second student's data
+        while (true) {
+            //input the second student's data
             //Input the first student's data
             {
                 System.out.println("Enter name for secondd students: ");
@@ -44,17 +45,21 @@ public class StudentInterFace {
                 score = scan.nextInt();
                 stu2.setScore(i, score);
             }
-            String errormsg = stu1.validateData();
+            String errormsg = stu2.validateData();
             if (errormsg == null) {
                 break;
             } else {
                 System.out.println(errormsg);
                 scan.nextLine();
             }
-            System.out.println("\n-----------------------\n");
-            //output the student's information
-            System.out.println("stu1");
-            System.out.println("stu2");
+
         }
+        System.out.println("\n-----------------------\n");
+        //output the student's information
+        System.out.println(stu1);
+        System.out.println(stu2);
+        System.out.println("\n-----------------------\n");
+        stu1.getHighScore();
+        System.out.println("Highest Score: " high );
     }
 }

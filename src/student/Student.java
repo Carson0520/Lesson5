@@ -69,9 +69,9 @@ public class Student {
     public String toString() {
         String str;
         str = "Name:\t" + name;
-        str += "nTest:\t" + test1;
-        str += "nTest:\t" + test2;
-        str += "nTest:\t" + test3;
+        str += "\nTest:\t" + test1;
+        str += "\nTest:\t" + test2;
+        str += "\nTest:\t" + test3;
         return str;
     }
 
