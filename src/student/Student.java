@@ -9,6 +9,10 @@ package student;
  *
  * @author cars0520
  */
-public class Student {
+public class Student { //this is a client class
+    public static void main(String args[]){
+        student s1, s2, s3;
+        s1 = new student();
+    }
     
 }
