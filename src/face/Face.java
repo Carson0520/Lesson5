@@ -51,8 +51,9 @@ public class Face {
         g.drawLine(mx, my, mx + (int) (.4 * diameter), my);
     }
 
-    void move(int newx, int newy) {
-        newx=xPos;
-        newy=yPos;
+   public void move(int newx, int newy) {
+        xPos=newx;
+        yPos=newy;
+
     }
 }

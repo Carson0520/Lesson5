@@ -138,8 +138,7 @@ public class MainApp extends javax.swing.JFrame {
         btnmove.setEnabled(true);
         btnresize.setEnabled(true);
 
-        f = new Face(facePanel.getGraphics(),50,50);
-                f.erase();
+    
         
         f.draw();
     }//GEN-LAST:event_btnsetActionPerformed
@@ -155,9 +154,7 @@ public class MainApp extends javax.swing.JFrame {
 
     private void btncolorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncolorActionPerformed
         // TODO add your handling code here:
-        Color newColor = JColorChooser.showDialog(this, "Pick New Dice Color", Color.red);
-        f.g.setColor(Color.white);
-        newColor=JColorChooser.showDialog(this,"Choose eye color", Color.yellow);
+
         
        
         
