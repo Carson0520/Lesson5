@@ -129,7 +129,7 @@ public class MainApp extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
     private void btnsetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsetActionPerformed
         //enable all 4 face control buttons (these should start out disabled)
                 f.erase();

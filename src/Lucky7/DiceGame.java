@@ -36,11 +36,16 @@ public class DiceGame extends javax.swing.JFrame {
         colorbutton = new javax.swing.JButton();
         dicePanel1 = new javax.swing.JPanel();
         dicePanel2 = new javax.swing.JPanel();
-        totallabel = new javax.swing.JLabel();
+        lblTotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         rollbutton.setText("Roll");
+        rollbutton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rollbuttonActionPerformed(evt);
+            }
+        });
 
         colorbutton.setText("Set Dice Color");
         colorbutton.addActionListener(new java.awt.event.ActionListener() {
@@ -80,12 +85,12 @@ public class DiceGame extends javax.swing.JFrame {
             .addGap(0, 150, Short.MAX_VALUE)
         );
 
-        totallabel.setBackground(new java.awt.Color(0, 0, 0));
-        totallabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        totallabel.setForeground(new java.awt.Color(255, 255, 255));
-        totallabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        totallabel.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        totallabel.setOpaque(true);
+        lblTotal.setBackground(new java.awt.Color(0, 0, 0));
+        lblTotal.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblTotal.setForeground(new java.awt.Color(255, 255, 255));
+        lblTotal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTotal.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lblTotal.setOpaque(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,7 +110,7 @@ public class DiceGame extends javax.swing.JFrame {
                             .addComponent(colorbutton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(14, 14, 14))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(totallabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
@@ -120,7 +125,7 @@ public class DiceGame extends javax.swing.JFrame {
                     .addComponent(dicePanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                     .addComponent(dicePanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
                 .addGap(59, 59, 59)
-                .addComponent(totallabel, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                .addComponent(lblTotal, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                 .addGap(48, 48, 48))
         );
 
@@ -136,6 +141,15 @@ public class DiceGame extends javax.swing.JFrame {
         d1.draw();
         d2.draw();
     }//GEN-LAST:event_colorbuttonActionPerformed
+
+    private void rollbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rollbuttonActionPerformed
+        // TODO add your handling code here:
+        d1.roll();
+        d2.roll();
+        int total = d1.getNumber() + d2.getNumber();
+        lblTotal.setText("Total : " + total);
+        
+    }//GEN-LAST:event_rollbuttonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -176,7 +190,7 @@ public class DiceGame extends javax.swing.JFrame {
     private javax.swing.JButton colorbutton;
     private javax.swing.JPanel dicePanel1;
     private javax.swing.JPanel dicePanel2;
+    private javax.swing.JLabel lblTotal;
     private javax.swing.JButton rollbutton;
-    private javax.swing.JLabel totallabel;
     // End of variables declaration//GEN-END:variables
 }
