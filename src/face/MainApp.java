@@ -1,19 +1,23 @@
 package face;
 
 import java.awt.Color;
+import java.awt.event.MouseEvent;
+
 import javax.swing.JColorChooser;
 import javax.swing.JOptionPane;
 
 public class MainApp extends javax.swing.JFrame {
+
     Face f;
-    
+
     /**
      * Creates new form MainApp1
      */
     public MainApp() {
+
         initComponents();
-        f = new Face(facePanel.getGraphics(),100,100);
-        
+        f = new Face(facePanel.getGraphics(), 100, 100);
+
     }
 
     /**
@@ -129,36 +133,31 @@ public class MainApp extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+
     private void btnsetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsetActionPerformed
         //enable all 4 face control buttons (these should start out disabled)
-                f.erase();
+        f.erase();
         btnmood.setEnabled(true);
         btncolor.setEnabled(true);
         btnmove.setEnabled(true);
         btnresize.setEnabled(true);
 
-    
-        
         f.draw();
     }//GEN-LAST:event_btnsetActionPerformed
 
     private void btnmoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmoveActionPerformed
         // TODO add your handling code here:
-        int newx = Integer.parseInt(JOptionPane.showInputDialog(this,"Enter New X"));
-                int newy = Integer.parseInt(JOptionPane.showInputDialog(this,"Enter New Y"));
-                f.erase();
-                f.move(newx, newy);
-                f.draw();
+        int newx = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter New X"));
+        int newy = Integer.parseInt(JOptionPane.showInputDialog(this, "Enter New Y"));
+        f.erase();
+        f.move(newx, newy);
+        f.draw();
     }//GEN-LAST:event_btnmoveActionPerformed
 
     private void btncolorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncolorActionPerformed
         // TODO add your handling code here:
 
-        
-       
-        
-        
+
     }//GEN-LAST:event_btncolorActionPerformed
 
     /**
